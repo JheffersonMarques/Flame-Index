@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 });
 
 let icons = {
-    "/api/spells": "/imgs/icon/sparkles.svg"
+    "/api/spells": "imgs/icon/sparkles.svg"
 }
 
 async function search() {
