@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame Index</title>
+    <script src="js/dndApi.js"></script>
+    <script src="js/search.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="imgs/logo.svg" type="image/x-icon">
+</head>
+<body onload="search()">
+    <div class="app-content">
+        <div class="app-title">
+            <img src="imgs/logo.svg"/>
+            <h1>Flame Index</h1>
+        </div>
+    </div>
+    <div class="search-bar">
+        <div class="app-text-input">
+            <input id="search-data" type="text" placeholder="Search" onchange="search()">
+        </div>
+        <div class="app-button-input-search" type="button" onclick="search()">
+            <img src="imgs/search.svg" alt="">
+        </div>
+    </div>
+    <div id="results">
+                
+    </div>
+    <div class="offset-container">
+        <button class="offset" onclick="changeOffsetAndUpdate(false)">Previous</button>
+        <span class="values" id="value">0 out of 0</span>
+        <button class="offset" onclick="changeOffsetAndUpdate(true)">Next</button>
+    </div>
+</body>
+</html>

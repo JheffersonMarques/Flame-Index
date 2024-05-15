@@ -1,0 +1,66 @@
+
+.spell-name, .components-section, .spell-school {
+    margin: 1rem;
+}
+
+.spell-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spell-name > a {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.spell-desc {
+    margin: 1rem;
+    text-align: justify;
+    padding: 2rem;
+    background-color: var(--background-highlight-color);
+    border-radius: 5px;
+}
+
+.spell-desc-content-table > table > tbody > tr > td, .spell-desc-content-table > table > thead > tr > th {
+    padding: 0.5rem;
+}
+
+.spell-desc-content-table > table{
+    width: 100%;
+}
+
+.spell-desc-content {
+    padding-top: 1rem;
+}
+
+.table {
+    display: flex;
+}
+
+.table > table {
+    width: 100%;
+}
+
+.properties-table {
+    border-radius: 5px;
+    margin: 1rem;
+    background-color: var(--background-highlight-color);
+}
+
+.properties-table-header{
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--background-secondary-color);
+    border: solid 1px var(--background-highlight-color);
+}
+
+.properties-table-row{
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: solid 1px var(--background-highlight-color);
+}
+.properties-table-row:nth-child(1){
+    width: 25%;
+}
