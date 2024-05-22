@@ -53,7 +53,7 @@ function makeTableMapper(name, kind) {
 
 
 function buildSpell(data, target) {
-    document.getElementsByTagName("head")[0].innerHTML += `<link rel="stylesheet" href="../css/spell.css">`
+    document.getElementsByTagName("head")[0].innerHTML += `<link rel="stylesheet" href="../css/spells.css">`
     
     let page = target.innerHTML;
 
@@ -167,5 +167,4 @@ function buildSpell(data, target) {
     page += `</table> </div>`
 
     target.innerHTML = page;
-    target.classList += "loaded"
 }

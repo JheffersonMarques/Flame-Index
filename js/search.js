@@ -48,6 +48,8 @@ function changeOffsetAndUpdate(incr) {
     let content = document.getElementById("results");
     content.setAttribute("class", "")
     
+    let offset = _GLOBAL.offset;
+
     if (incr && _GLOBAL.offset + _GLOBAL.gap < _GLOBAL.max) {
         _GLOBAL.offset += _GLOBAL.gap
     } else if (!incr && _GLOBAL.offset - _GLOBAL.gap >= 0) {
@@ -56,12 +58,11 @@ function changeOffsetAndUpdate(incr) {
 
     document.getElementById("value").innerText = `${parseInt(_GLOBAL.offset / _GLOBAL.gap)} out of ${parseInt(_GLOBAL.max / _GLOBAL.gap)}`
 
-    
     update(content, _GLOBAL.data.slice(_GLOBAL.offset, _GLOBAL.offset + _GLOBAL.gap));
 
-
     document.getElementById('value').scrollIntoView();
-    content.setAttribute("class", "loaded")
+    if(offset != _GLOBAL.offset)
+        content.setAttribute("class", "loaded")
 }
 
 
@@ -72,7 +73,7 @@ function update(content, data) {
     
     data.forEach(elem => {
         content.innerHTML += `<div class="result-block">
-            <a class="block-link" href="/result/?item=${elem.from + "/" + elem.result.index}&kind=${elem.from.replace("/api/", "")}">
+            <a class="block-link" href="./result/?item=${elem.from + "/" + elem.result.index}&kind=${elem.from.replace("/api/", "")}">
                 <div class="result-block-content">
                     <div class="result-icon">
                         <img src="${icons[elem.from]}">

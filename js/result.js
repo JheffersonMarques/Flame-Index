@@ -31,8 +31,8 @@ async function handlePageData() {
 
     var name = indexToName(item.replace(toRemove.filter((str) => str.search(item))[0], ""));
     var type = names[kind];
-    document.getElementsByTagName("title")[0].innerHTML = `${name} - ${type} - Flame Index`
+    document.getElementsByTagName("title")[0].innerHTML = `${type}: ${name} - Flame Index`
 
     handlers[kind](data,elem);
-
+    elem.setAttribute("class", "loaded")
 }
