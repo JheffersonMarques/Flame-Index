@@ -72,7 +72,7 @@ function update(content, data) {
     
     data.forEach(elem => {
         content.innerHTML += `<div class="result-block">
-            <a class="block-link" href="/result.html?item=${elem.from + "/" + elem.result.index}&kind=${elem.from.replace("/api/", "")}">
+            <a class="block-link" href="/result/?item=${elem.from + "/" + elem.result.index}&kind=${elem.from.replace("/api/", "")}">
                 <div class="result-block-content">
                     <div class="result-icon">
                         <img src="${icons[elem.from]}">
