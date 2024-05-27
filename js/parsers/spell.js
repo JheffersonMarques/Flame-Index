@@ -57,7 +57,7 @@ function buildSpell(data, target) {
     
     let page = target.innerHTML;
 
-    page += `<a class="return" href="/">
+    page += `<a class="return" href="../">
                 <img src="../imgs/return.svg"/>
             </a>`
 
